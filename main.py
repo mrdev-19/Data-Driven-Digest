@@ -5,6 +5,19 @@ from dotenv import load_dotenv
 import base64
 
 
+#--------------------------------------------------
+#hide the header and footer     
+
+hide_ele="""
+        <style>
+        #Mainmenu {visibility:hidden;}
+        footer {visibility:hidden;}
+        header {visibility:hidden;}
+        </style>
+        """
+st.markdown(hide_ele,unsafe_allow_html=True)
+#---------------------------------------------------
+
 load_dotenv(".env")
 
 def load_icon(path):
