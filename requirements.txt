@@ -1,0 +1,5 @@
+streamlit
+streamlit-option-menu
+deta
+python-dotenv
+streamlit-card
