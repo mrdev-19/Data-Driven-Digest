@@ -34,9 +34,27 @@ hide_ele="""
 st.markdown(hide_ele,unsafe_allow_html=True)
 #---------------------------------------------------
 st.header("This page has articles and tutorials :)")
+st.text_input("")
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+def remote_css(url):
+    st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)    
+
+def icon(icon_name):
+    st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
+
+local_css("style.css")
+remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
+
+icon("search")
+selected = st.text_input("", "Search...")
+button_clicked = st.button("OK")
+
 
 hasClicked = card(
-  title="Hello World!",
+  title="Demo Card!",
   text="Some description",
   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF9W9vwDNn5X7zAVeDHXgUKo0nBy0pqCaDcw&s",
   url="https://www.linkedin.com/in/mrdev19/"
