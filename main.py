@@ -3,6 +3,7 @@ import os
 from deta import Deta
 from dotenv import load_dotenv
 import base64
+from streamlit_card import card
 
 load_dotenv(".env")
 
@@ -33,3 +34,10 @@ hide_ele="""
 st.markdown(hide_ele,unsafe_allow_html=True)
 #---------------------------------------------------
 st.header("This page has articles and tutorials :)")
+
+hasClicked = card(
+  title="Hello World!",
+  text="Some description",
+  image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF9W9vwDNn5X7zAVeDHXgUKo0nBy0pqCaDcw&s",
+  url="https://www.linkedin.com/in/mrdev19/"
+)
